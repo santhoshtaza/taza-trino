@@ -1,8 +1,17 @@
 #!/bin/bash
-# Replace <account_id>, <username>, and prompt for MFA token code
-read -p "Enter username: " awsusername
-read -p "Enter account ID: " awsaccountid
-read -p "Enter MFA token code: " mfatokencode
 
-# Fetch session token and write to .env file
-aws sts get-session-token --serial-number arn:aws:iam::$awsaccountid:mfa/$awsusername --token-code $mfatokencode | jq -r '"AWS_ACCESS_KEY_ID=" + .Credentials.AccessKeyId, "AWS_SECRET_ACCESS_KEY=" + .Credentials.SecretAccessKey, "AWS_SESSION_TOKEN=" + .Credentials.SessionToken' > .env
+# Set your access key ID and secret key directly
+read -p "Enter aws access key: " awsaccesskey
+read -p "Enter aws secret key: " awssecret
+AWS_ACCESS_KEY_ID=$awsaccesskey
+AWS_SECRET_ACCESS_KEY=$awssecret
+
+# Optionally, you can set the session token if required
+# AWS_SESSION_TOKEN="YOUR_SESSION_TOKEN"
+
+# Write to .env file
+echo "AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID" > .env
+echo "AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY" >> .env
+# echo "AWS_SESSION_TOKEN=$AWS_SESSION_TOKEN" >> .env
+
+echo "Environment variables written to .env file."
