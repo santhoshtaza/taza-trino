@@ -1,18 +1,3 @@
-# version: "3.7"
-
-# services:
-#   trino:
-#     image: trinodb/trino
-#     container_name: trino
-#     ports:
-#       - "8080:8080"
-#     environment:
-#       - AWS_ACCESS_KEY_ID=ASIAUGJYD3OS4AD5MZDA
-#       - AWS_SECRET_ACCESS_KEY=ALyTLNsiX5Goe799CKE2nS5iBJtwrJSI9EVrRyMd
-#       - AWS_SESSION_TOKEN=IQoJb3JpZ2luX2VjENP//////////wEaDmFwLXNvdXRoZWFzdC0xIkcwRQIgBnRixGEr6GCN8Kx2ydV4QOr2kNpEnUyPeflb3N5BZS4CIQCBkFwkAehWd46BrqhvUn3DnPzZbF/Icbi9mrasbptONyr4AQj8//////////8BEAEaDDI4ODQxNzM3MzA5MyIMul3gdCV/gCXH58qUKswBN1CxwXP9yMIh1o4c4sFYSYgLLgHY41q5IUxwj1xet9t6Kp6kAQCp1WVNn/7Y99E0b+Jc2MUneYSCP8eXaHiRRUVCCPuzFsV81kGpZFx3MdtxU9bDdWuNl+KkKnFi0oZ8B/jksHyM+P4z/kJMdPKzg3GxMbyDxJrOmkGYC8gy9xMiesATl0xif3OHUrgqZDoI/0q7xIdp4o1Iv7b0PFiNs9ASwsoNNcyB1Y9CpZPs9FFguM0z0mgl9m/Mn7tBfEEQDG7Z3S77w6slplx4MJPW0rAGOpgBkOYbi7L7VbfPYg2jl0hib2LmavsGs/DdC0N0SuAHpkqoNlvF4dUVGR+zIHgtr7x2cpAPcUAhGnQnIxi0h9Vt+8z9lNNyoX/T5i6dlQUjWwyS72e3aEo/wL/MEwUqTzQIc4lf65pnr18qI0ZDvTgHpimgCsXpFL3KmilDG1LAzGVGRBTtAcB9fUQHxjEdhZxjWBjdfcHYu84=
-#     volumes:
-#       - ./iceberg.properties:/etc/trino/catalog/iceberg.properties
-
 version: "3.7"
 
 services:
