@@ -1,1 +1,11 @@
 .env
+.vscode
+/path
+To
+iceberg.session.sql
+node.properties
+limits.conf
+jvm.config
+iceberg.sh
+entrypoint.sh
+bootstrap.sh
